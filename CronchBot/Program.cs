@@ -47,7 +47,8 @@ namespace CronchBot
                         tweet += phrase + " ";
                     }
                     tweet = tweet.TrimEnd();
-                    Tweet.PublishTweet(tweet);
+                    try { Tweet.PublishTweet(tweet); }
+                    catch { }
                     Console.WriteLine("Posted tweet at " + DateTime.Now);
                 }
                 else if (hasPosted) hasPosted = false;
