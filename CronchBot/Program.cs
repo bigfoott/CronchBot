@@ -33,7 +33,7 @@ namespace CronchBot
             while (true)
             {
                 Thread.Sleep(1000);
-                if (DateTime.Now.Minute % 30 == 0)
+                if (DateTime.Now.Minute == 0)
                 {
                     if (hasPosted) continue;
                     hasPosted = true;
